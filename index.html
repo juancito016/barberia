@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>La Fachería 💈 | Barbería Premium</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <!-- Swiper CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Config Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-gold': '#D4AF37',
+                        'brand-gold-hover': '#B5952F',
+                        'brand-dark': '#121212',
+                        'brand-gray': '#1E1E1E',
+                        'brand-light': '#F5F5F5'
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- LINK AL CSS EXTERNO -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="antialiased">
+    
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 top-0 py-6 transition-all duration-300">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-2xl md:text-3xl font-serif font-bold text-white flex items-center gap-2">
+                <span class="text-brand-gold text-3xl">💈</span> La Fachería
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#inicio" class="text-white hover:text-brand-gold transition-colors text-sm font-medium uppercase tracking-wider">Inicio</a>
+                <a href="#servicios" class="text-white hover:text-brand-gold transition-colors text-sm font-medium uppercase tracking-wider">Servicios</a>
+                <a href="#productos" class="text-white hover:text-brand-gold transition-colors text-sm font-medium uppercase tracking-wider">Productos</a>
+                <a href="#galeria" class="text-white hover:text-brand-gold transition-colors text-sm font-medium uppercase tracking-wider">Galería</a>
+                <a href="https://linktr.ee/BARBER_RONALD" target="_blank" class="bg-brand-gold text-brand-dark px-6 py-2 rounded-full font-bold hover:bg-white hover:text-brand-dark transition-all transform hover:scale-105 shadow-lg border-2 border-transparent">
+                    Reservar
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 bg-brand-dark bg-opacity-98 z-40 transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center space-y-8 md:hidden">
+            <button id="close-menu-btn" class="absolute top-6 right-6 text-white text-3xl">
+                <i class="fas fa-times"></i>
+            </button>
+            <a href="#inicio" class="mobile-link text-2xl font-serif text-white hover:text-brand-gold">Inicio</a>
+            <a href="#servicios" class="mobile-link text-2xl font-serif text-white hover:text-brand-gold">Servicios</a>
+            <a href="#productos" class="mobile-link text-2xl font-serif text-white hover:text-brand-gold">Productos</a>
+            <a href="#galeria" class="mobile-link text-2xl font-serif text-white hover:text-brand-gold">Galería</a>
+            <a href="https://linktr.ee/BARBER_RONALD" target="_blank" class="bg-brand-gold text-brand-dark px-8 py-3 rounded-full font-bold text-xl hover:bg-white transition-all">
+                Reservar Cita
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Carousel) -->
+    <section id="inicio" class="relative">
+        <div class="swiper mySwiper swiper-fade swiper-initialized swiper-horizontal swiper-watch-progress swiper-backface-hidden">
+            <div class="swiper-wrapper" id="swiper-wrapper-6d2de8b1d7aeeae8" aria-live="off" style="transition-duration: 0ms; transition-delay: 0ms;"><div class="swiper-slide flex items-center justify-center swiper-slide-visible swiper-slide-active" role="group" aria-label="1 / 3" data-swiper-slide-index="0" style="width: 1079px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
+                    <img src="images/carousel/Carrusel1.png" alt="Interior Barbería" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="slide-content text-center px-4 max-w-4xl mx-auto">
+                        <h1 class="text-5xl md:text-7xl font-serif font-bold text-white mb-4 drop-shadow-lg tracking-tight">Estilo y Tradición</h1>
+                        <p class="text-xl md:text-2xl text-gray-200 mb-8 font-light">Reserva tu corte con el barbero que tú elijas</p>
+                        <a href="https://linktr.ee/BARBER_RONALD" target="_blank" class="inline-block bg-brand-gold text-brand-dark px-8 py-4 rounded-full font-bold text-lg hover:bg-white transition-all transform hover:-translate-y-1 shadow-[0_0_20px_rgba(212,175,55,0.5)]">
+                            Reservar Ahora
+                        </a>
+                    </div>
+                </div><div class="swiper-slide flex items-center justify-center swiper-slide-next" role="group" aria-label="2 / 3" data-swiper-slide-index="1" style="width: 1079px; opacity: 0; transform: translate3d(-1079px, 0px, 0px); transition-duration: 0ms;">
+                    <img src="images/carousel/Carrusel2.png" alt="Corte Fade" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="slide-content text-center px-4 max-w-4xl mx-auto">
+                        <h1 class="text-5xl md:text-7xl font-serif font-bold text-white mb-4 drop-shadow-lg tracking-tight">Cortes Modernos</h1>
+                        <p class="text-xl md:text-2xl text-gray-200 mb-8 font-light">Expertos en fades, diseños y tendencias actuales</p>
+                        <a href="https://linktr.ee/BARBER_RONALD" target="_blank" class="inline-block bg-transparent border-2 border-brand-gold text-brand-gold px-8 py-4 rounded-full font-bold text-lg hover:bg-brand-gold hover:text-brand-dark transition-all">
+                            Ver Servicios
+                        </a>
+                    </div>
+                </div><div class="swiper-slide flex items-center justify-center" role="group" aria-label="3 / 3" data-swiper-slide-index="2" style="width: 1079px; opacity: 0; transform: translate3d(-2158px, 0px, 0px); transition-duration: 0ms;">
+                    <img src="images/carousel/Carrusel3.png" alt="Barba y Afeitado" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="slide-content text-center px-4 max-w-4xl mx-auto">
+                        <h1 class="text-5xl md:text-7xl font-serif font-bold text-white mb-4 drop-shadow-lg tracking-tight">Cuidado de Barba</h1>
+                        <p class="text-xl md:text-2xl text-gray-200 mb-8 font-light">Perfilado perfecto y ritual de toalla caliente</p>
+                        <a href="https://linktr.ee/BARBER_RONALD" target="_blank" class="inline-block bg-brand-gold text-brand-dark px-8 py-4 rounded-full font-bold text-lg hover:bg-white transition-all">
+                            Agendar Cita
+                        </a>
+                    </div>
+                </div>
+                <!-- Slide 1 -->
+                
+                <!-- Slide 2 -->
+                
+                <!-- Slide 3 -->
+                
+            </div>
+            <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span></div>
+            <div class="swiper-button-next text-brand-gold" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-6d2de8b1d7aeeae8"></div>
+            <div class="swiper-button-prev text-brand-gold" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-6d2de8b1d7aeeae8"></div>
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section id="servicios" class="py-20 bg-brand-gray relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <span class="text-brand-gold uppercase tracking-widest text-sm font-bold">Lo que hacemos</span>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mt-2">Nuestros Servicios</h2>
+                <div class="w-24 h-1 bg-brand-gold mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-brand-dark p-8 rounded-xl border border-gray-800 hover:border-brand-gold transition-all duration-300 group hover:-translate-y-2 reveal">
+                    <div class="w-16 h-16 bg-brand-gray rounded-full flex items-center justify-center mb-6 text-brand-gold text-2xl group-hover:bg-brand-gold group-hover:text-brand-dark transition-colors">
+                        <i class="fas fa-scissors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Corte Clásico</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Tijera y máquina. Un estilo atemporal adaptado a tu morfología craneal para un acabado elegante.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-brand-dark p-8 rounded-xl border border-gray-800 hover:border-brand-gold transition-all duration-300 group hover:-translate-y-2 reveal" style="transition-delay: 100ms;">
+                    <div class="w-16 h-16 bg-brand-gray rounded-full flex items-center justify-center mb-6 text-brand-gold text-2xl group-hover:bg-brand-gold group-hover:text-brand-dark transition-colors">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Fade / Degradado</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Skin fade, taper fade o low fade. Precisión milimétrica para el look más moderno y urbano.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-brand-dark p-8 rounded-xl border border-gray-800 hover:border-brand-gold transition-all duration-300 group hover:-translate-y-2 reveal" style="transition-delay: 200ms;">
+                    <div class="w-16 h-16 bg-brand-gray rounded-full flex items-center justify-center mb-6 text-brand-gold text-2xl group-hover:bg-brand-gold group-hover:text-brand-dark transition-colors">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Barba y Perfilado</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Ritual de toalla caliente, aceites esenciales y navaja libre para un perfilado perfecto.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-brand-dark p-8 rounded-xl border border-gray-800 hover:border-brand-gold transition-all duration-300 group hover:-translate-y-2 reveal" style="transition-delay: 300ms;">
+                    <div class="w-16 h-16 bg-brand-gray rounded-full flex items-center justify-center mb-6 text-brand-gold text-2xl group-hover:bg-brand-gold group-hover:text-brand-dark transition-colors">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Servicio VIP</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Corte + Barba + Masaje capilar + Bebida de cortesía. La experiencia completa de La Fachería.</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-12 reveal">
+                <a href="https://linktr.ee/BARBER_RONALD" target="_blank" class="text-brand-gold border-b-2 border-brand-gold pb-1 hover:text-white hover:border-white transition-colors uppercase text-sm font-bold tracking-widest">
+                    Ver precios y reservar <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos Section -->
+    <section id="productos" class="py-20 bg-brand-dark relative overflow-hidden">
+        <!-- Decorative Background Element -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-brand-gold opacity-5 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 reveal">
+                <span class="text-brand-gold uppercase tracking-widest text-sm font-bold">Tienda</span>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mt-2">Productos Premium</h2>
+                <div class="w-24 h-1 bg-brand-gold mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Product 1 -->
+                <div class="group bg-brand-gray rounded-2xl overflow-hidden shadow-lg reveal">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="images/productos/pomada.png" alt="Pomada Mate" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-0 transition-all"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Pomada Mate Fachería</h3>
+                        <p class="text-gray-400 text-sm mb-4">Fijación fuerte con acabado natural. Ideal para estilos texturizados que duran todo el día.</p>
+                        <a href="https://wa.me/?text=Hola%2C%20quiero%20comprar%20el%20producto%20Pomada%20Mate%20Fachería" target="_blank" class="block w-full bg-green-600 hover:bg-green-500 text-white text-center py-3 rounded-lg font-bold transition-colors">
+                            <i class="fab fa-whatsapp mr-2"></i> Comprar ahora
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="group bg-brand-gray rounded-2xl overflow-hidden shadow-lg reveal" style="transition-delay: 100ms;">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="images/productos/aceite.png" alt="Aceite para Barba" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-0 transition-all"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Elixir para Barba</h3>
+                        <p class="text-gray-400 text-sm mb-4">Hidratación profunda con notas de sándalo y bergamota. Suaviza y da brillo.</p>
+                        <a href="https://wa.me/?text=Hola%2C%20quiero%20comprar%20el%20producto%20Elixir%20para%20Barba" target="_blank" class="block w-full bg-green-600 hover:bg-green-500 text-white text-center py-3 rounded-lg font-bold transition-colors">
+                            <i class="fab fa-whatsapp mr-2"></i> Comprar ahora
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="group bg-brand-gray rounded-2xl overflow-hidden shadow-lg reveal" style="transition-delay: 200ms;">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="images/productos/gel.png" alt="Gel de Afeitar" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-0 transition-all"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Gel de Afeitar Transparente</h3>
+                        <p class="text-gray-400 text-sm mb-4">Diseñado para máxima precisión en el perfilado. Fórmula anti-irritación.</p>
+                        <a href="https://wa.me/?text=Hola%2C%20quiero%20comprar%20el%20producto%20Gel%20de%20Afeitar" target="_blank" class="block w-full bg-green-600 hover:bg-green-500 text-white text-center py-3 rounded-lg font-bold transition-colors">
+                            <i class="fab fa-whatsapp mr-2"></i> Comprar ahora
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería Section -->
+    <section id="galeria" class="py-20 bg-brand-gray">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <span class="text-brand-gold uppercase tracking-widest text-sm font-bold">Nuestro Trabajo</span>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mt-2">Galería de Estilos</h2>
+                <div class="w-24 h-1 bg-brand-gold mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+                <!-- Gallery Item 1 -->
+                <div class="aspect-square rounded-lg overflow-hidden relative group cursor-pointer reveal hover:shadow-xl hover:shadow-brand-gold/20" onclick="openModal(this)">
+                    <img src="images/galeria/galeria1.png" alt="Corte Pompadour" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                        <i class="fas fa-search-plus text-white text-3xl"></i>
+                    </div>
+                </div>
+                <!-- Gallery Item 2 -->
+                <div class="aspect-square rounded-lg overflow-hidden relative group cursor-pointer reveal" style="transition-delay: 50ms;" onclick="openModal(this)">
+                    <img src="images/galeria/galeria2.png" alt="Perfilado" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                        <i class="fas fa-search-plus text-white text-3xl"></i>
+                    </div>
+                </div>
+                <!-- Gallery Item 3 -->
+                <div class="aspect-square rounded-lg overflow-hidden relative group cursor-pointer reveal" style="transition-delay: 100ms;" onclick="openModal(this)">
+                    <img src="images/galeria/galeria3.png" alt="Mullet Moderno" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                        <i class="fas fa-search-plus text-white text-3xl"></i>
+                    </div>
+                </div>
+                <!-- Gallery Item 4 -->
+                <div class="aspect-square rounded-lg overflow-hidden relative group cursor-pointer reveal" style="transition-delay: 150ms;" onclick="openModal(this)">
+                    <img src="images/galeria/galeria4.png" alt="Barba Completa" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                        <i class="fas fa-search-plus text-white text-3xl"></i>
+                    </div>
+                </div>
+                <!-- Gallery Item 5 -->
+                <div class="aspect-square rounded-lg overflow-hidden relative group cursor-pointer reveal" style="transition-delay: 200ms;" onclick="openModal(this)">
+                    <img src="images/galeria/galeria5.png" alt="Corte Niño" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                        <i class="fas fa-search-plus text-white text-3xl"></i>
+                    </div>
+                </div>
+                <!-- Gallery Item 6 -->
+                <div class="aspect-square rounded-lg overflow-hidden relative group cursor-pointer reveal" style="transition-delay: 250ms;" onclick="openModal(this)">
+                    <img src="images/galeria/galeria6.png" alt="Toalla Caliente" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                        <i class="fas fa-search-plus text-white text-3xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-24 bg-brand-dark relative flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20">
+            <img src="https://images.unsplash.com/photo-1596728328637-234b6e8e7854?q=80&amp;w=2070&amp;auto=format&amp;fit=crop" alt="Fondo" class="w-full h-full object-cover grayscale">
+        </div>
+        <div class="relative z-10 container mx-auto px-6 text-center reveal">
+            <h2 class="text-4xl md:text-6xl font-serif font-bold text-white mb-6">¿Listo para el cambio?</h2>
+            <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">Agenda tu cita en segundos y vive la experiencia Fachería.</p>
+            <a href="https://linktr.ee/BARBER_RONALD" target="_blank" class="inline-block bg-brand-gold text-brand-dark px-10 py-4 rounded-full font-bold text-xl hover:bg-white hover:scale-105 transition-all shadow-lg shadow-brand-gold/30">
+                Reservar Ahora
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-10 border-t border-gray-900">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0 text-center md:text-left">
+                <a href="#" class="text-2xl font-serif font-bold text-white flex items-center gap-2 justify-center md:justify-start">
+                    <span class="text-brand-gold">💈</span> La Fachería
+                </a>
+                <p class="text-gray-500 mt-2 text-sm">Estilo y elegancia para el hombre moderno.</p>
+            </div>
+            <div class="flex space-x-6 text-2xl">
+                <a href="#" class="text-gray-400 hover:text-brand-gold transition-colors"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-gray-400 hover:text-brand-gold transition-colors"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-gray-400 hover:text-brand-gold transition-colors"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+        <div class="text-center mt-8 text-gray-700 text-xs">
+            © 2024 La Fachería. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <!-- Floating Mobile Button -->
+    <div class="fixed bottom-6 right-6 md:hidden z-40">
+        <a href="https://linktr.ee/BARBER_RONALD" target="_blank" class="floating-btn flex items-center justify-center w-16 h-16 bg-brand-gold rounded-full text-brand-dark shadow-2xl transition-transform hover:scale-110 active:scale-95">
+            <i class="fas fa-calendar-check text-2xl"></i>
+        </a>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="fixed inset-0 z-[60] hidden flex items-center justify-center bg-black bg-opacity-90 p-4" onclick="closeModal()">
+        <button class="absolute top-6 right-6 text-white text-4xl hover:text-brand-gold transition-colors z-50">×</button>
+        <img id="modalImg" src="" alt="Zoom" class="max-w-full max-h-[90vh] rounded-lg shadow-2xl transform scale-95 opacity-0 transition-all duration-300">
+    </div>
+
+    <!-- UI DEL DESCARGADOR DE PROYECTO -->
+    
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Main Logic -->
+    
+
+    <!-- SCRIPT DEL DESCARGADOR DE CÓDIGO -->
+    
+
+
+
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    
+    <!-- LINK AL JS EXTERNO -->
+    <script src="js/main.js"></script>
+</body>
+</html>
