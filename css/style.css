@@ -1,6 +1,6 @@
 /* Custom Styles */
         body {
-            background-color: #121212;
+            background-color: #080808;
             color: #F5F5F5;
             overflow-x: hidden;
         }
@@ -76,7 +76,7 @@
             transition: background-color 0.3s ease, padding 0.3s ease;
         }
         #navbar.scrolled {
-            background-color: rgba(18, 18, 18, 0.95);
+            background-color: rgba(8, 8, 8, 0.95);
             padding-top: 1rem;
             padding-bottom: 1rem;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
@@ -84,7 +84,7 @@
 
         /* Floating Button */
         .floating-btn {
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+            box-shadow: 0 4px 15px rgba(0, 102, 255, 0.4);
             z-index: 50;
         }
 
@@ -100,7 +100,7 @@
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #D4AF37;
+            background: #0066ff;
         }
         
         /* Modal Styles */
